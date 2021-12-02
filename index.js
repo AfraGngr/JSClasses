@@ -94,29 +94,29 @@ const fName3 =  "Fatih"
 
 // ------------------------------------ BASIC OPERATORS  -------------------------------- //
 
-let currentYear = 2021;
-let age = currentYear - 1971;
+// let currentYear = 2021;
+// let age = currentYear - 1971;
 
-console.log("age: ", age)
+// console.log("age: ", age)
 
-let a = 3;
-let b = 8;
+// let a = 3;
+// let b = 8;
 
-let total = a + b ;
-let totalValue =  5 + 8;
-console.log(total, totalValue)
+// let total = a + b ;
+// let totalValue =  5 + 8;
+// console.log(total, totalValue)
 
-let x = 3 * 5 ;
-console.log(x)
+// let x = 3 * 5 ;
+// console.log(x)
 
-let y = 8 / 4;
-console.log(y)
+// let y = 8 / 4;
+// console.log(y)
 
-let exponent = 2 ** 3;
-console.log(exponent)
+// let exponent = 2 ** 3;
+// console.log(exponent)
 
-let mod = 10 % 3;
-console.log(mod)
+// let mod = 10 % 3;
+// console.log(mod)
 
 
 // Increment, decrement
@@ -124,31 +124,95 @@ console.log(mod)
 // " -- " -> 1 azalt
 // " ++ " -> 1 artır
 
-let ab = 3; 
-let xy = --ab;   // bu satırda ab = 2  // azalt sonra ata 
-console.log(ab, xy) // bu satırda ab = 2
+// let ab = 3; 
+// let xy = --ab;   // bu satırda ab = 2  // azalt sonra ata 
+// console.log(ab, xy) // bu satırda ab = 2
 
-let abc = 3;
-let xyz = abc-- // bu satırda abc = 3  // ata sonra azalt
-console.log(xyz, abc)
+// let abc = 3;
+// let xyz = abc-- // bu satırda abc = 3  // ata sonra azalt
+// console.log(xyz, abc)
 
 
-let dec = 5;
-let assg = ++dec;  // artır sonra ata 
+// let dec = 5;
+// let assg = ++dec;  // artır sonra ata 
 
-console.log(dec, assg)
+// console.log(dec, assg)
 
-let dec2 = 5;
-let assg2 = dec2++ // ata sonra artır
+// let dec2 = 5;
+// let assg2 = dec2++ // ata sonra artır
 
-console.log(assg2, dec2)
+// console.log(assg2, dec2)
 
 
 // String Concetanation 
 
-const firstName = "Jeff";
-const surName = "Bezos";
+// const firstName = "Jeff";
+// const surName = "Bezos";
 
-console.log(firstName + " " +surName)
+// console.log(firstName + " " +surName)
+
+
+// Assignment Operator 
+
+let val = true ;
+
+let x = 2
+
+x = x + 5
+console.log("x = " + x)
+
+x += 5
+console.log("x = " + x)
+
+let y = 10;
+y /= 2 ;
+console.log("y = " + y)
+
+y *= 4
+console.log("y = " + y)
+
+//x = x + y
+
+x += y
+console.log("x", x)
+
+// Comparison Operators 
+// <, >, >= , <= 
+
+let ageAhmet = 50;
+let ageUtku = 28;
+// This gives boolean value.
+console.log(ageAhmet > ageUtku)
+console.log(ageAhmet < ageUtku)
+
+console.log(ageAhmet == 50)
+console.log(ageUtku != 28)
+
+console.log("1", ageAhmet == "50") // loose comparison
+console.log("2", ageAhmet === "50") // strict comparison
+console.log("2", ageAhmet !== "50") 
+
+
+// Template Literal 
+
+let firstName = "Jeff"
+let secondName = "Bezos"
+let work = "Amazon"
+
+let sentence = "He is " + firstName + " " + secondName + " and He is founder of " + work + ".";
+
+console.log(sentence)
+
+let betterSentece = `He is ${firstName} ${secondName}, and He is foumder of ${work}.`
+
+console.log(betterSentece)
+
+
+console.log("I want to write this \n\
+on new line")
+
+console.log(`I want to write this \n\
+on new line`)
+
 
 
