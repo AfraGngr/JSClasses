@@ -92,7 +92,7 @@ const fName3 =  "Fatih"
 // console.log(typeof false)
 
 
-// ------------------------------------ BASIC OPERATORS  -------------------------------- //
+// ------------------------------------ BASIC OPERATORS  -------------------------------- //""
 
 // let currentYear = 2021;
 // let age = currentYear - 1971;
@@ -217,4 +217,40 @@ on new line`)
 
 console.log("For github desktop.")
 
+
+// ------------------------------------ CONDITIONALS -------------------------------- //
+
+const currentAge = 19
+
+//If the statement within the paranthesis is true, the code within the if block will execute.
+if(currentAge >= 18){
+    console.log("You can drive legally.")
+}
+else{ // if cuurentage < 18
+    console.log("You are not allowed to drive.")
+}
+
+const birthYear = 2001 ;
+
+let generation; 
+
+    if(birthYear >=  2000) {
+        generation = "Z"
+        //console.log(generation)
+    }else if( birthYear < 2000){
+        generation = "y"
+        //console.log(generation)
+    }else{
+
+    }
+
+console.log("gen", generation)
+/*
+Control flow
+if (){
+
+}else{
+
+}
+*/
 
