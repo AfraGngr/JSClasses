@@ -315,3 +315,106 @@ if(cash){
 }
 // If you write one line code u don't have to use curly braces
 // if(cash == 0) console.log("No jobs found")
+
+
+/** 
+ * AND OPERATOR
+    const a = have license (true)
+    const b = bigger than 18 (true)
+
+    a && b = can drive (true)
+    !a && b = cannot drive (false)
+    a && !b = cannot drive (false)
+    !a && !b = cannot drive(false)
+ */
+
+/** 
+ * OR OPERATOR 
+    const x = bigger than 65 
+    const y = chronic disease 
+
+    x || y = risky (true)
+    !x || y = risky (true)
+    x || !y = risky (true)
+    !x || !y = not risky (false)
+ */
+
+// SWITCH STATEMENT 
+
+// switch(expression){
+//     case x:
+//         code block
+//         break
+//     case y:
+//         code block
+//         break
+//     case z:
+//         code block
+//         break
+//     case m:
+//         code block
+//         break
+//     case n:
+//         code block
+//         break
+// }
+
+let day = "saturday" 
+
+//if(day == "saturday" || day == "sunday")
+
+switch(day){
+    case "monday":
+        console.log("There is not class, ypu can practice")
+        break
+    case "tuesday":
+        console.log("CSS")
+        break
+    case "wednesday":
+        console.log("Js")
+        break
+    case "thursday":
+        console.log("no class")
+        break
+    case "friday":
+        console.log("CSS")
+        break
+    default:
+        console.log("holiday")
+        break
+    // case "saturday":
+    // case "sunday":
+    //     console.log("holiday")
+    //     break
+}
+
+
+// TERNARY OPERATOR
+const gradeX = 50
+
+// if(gradeX >= 60){
+//     console.log("Passed")
+// }else{
+//     console.log("Failed")
+// }
+
+gradeX >= 60 ? console.log("Passed") : console.log("Failed")
+
+const weather = "cold"
+
+const season = weather === "hot" ? "summer" : "winter"
+
+console.log("season: ", season)
+
+// NULLISH COALESCING
+
+//const val = "xyz"
+const val = undefined
+
+const value = val ?? "Ahmet"
+
+console.log("values ", value)
+
+console.log( 0 || "Ahmet")
+
+console.log("Ahmet" && undefined && 2 )
