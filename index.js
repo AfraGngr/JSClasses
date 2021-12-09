@@ -700,109 +700,208 @@ P.S:  consider the negative, decimal and any entries other than numeric values t
 
 // ------------------------------------ STRING METHODS -------------------------------- //
 
-let text = "Her şey güzel olacak !"
-let len = text.length
-console.log("length " + len)
+// let text = "Her şey güzel olacak !"
+// let len = text.length
+// console.log("length " + len)
 
-// EXTRACT METHODS 
-// slice(start,end)
+// // EXTRACT METHODS 
+// // slice(start,end)
 
-let firstPArt = text.slice(8,13)
-console.log(firstPArt)
-console.log("text: " + text)
+// let firstPArt = text.slice(8,13)
+// console.log(firstPArt)
+// console.log("text: " + text)
 
-let secondPart = text.slice(8)
-console.log(secondPart)
+// let secondPart = text.slice(8)
+// console.log(secondPart)
 
-let thirdPart = text.slice(-14, -9)
-console.log(thirdPart)
+// let thirdPart = text.slice(-14, -9)
+// console.log(thirdPart)
 
-// substring(start, end)
-// does  not accept negative numbers
-let part = text.substring(8, 13)
-console.log(part)
+// // substring(start, end)
+// // does  not accept negative numbers
+// let part = text.substring(8, 13)
+// console.log(part)
 
-// substr(start, length)
+// // substr(start, length)
 
-let substrPart = text.substr(8,5)
-console.log(substrPart)
+// let substrPart = text.substr(8,5)
+// console.log(substrPart)
 
-let substrPart2 = text.substr(-14, 5)
-console.log(substrPart)
+// let substrPart2 = text.substr(-14, 5)
+// console.log(substrPart)
 
-// SPLIT
+// // SPLIT
 
-let text2 = "Turkey, Germany, USA, France"
-let splittedPart = text2.split(" ")
-console.log(splittedPart)
+// let text2 = "Turkey, Germany, USA, France"
+// let splittedPart = text2.split(" ")
+// console.log(splittedPart)
 
-let splittedPart2 = text2.split(",")
-console.log(splittedPart2)
-//console.log(splittedPart2[1])
+// let splittedPart2 = text2.split(",")
+// console.log(splittedPart2)
+// //console.log(splittedPart2[1])
 
-let splittedPart3 = text.split("")
-console.log(splittedPart3)
+// let splittedPart3 = text.split("")
+// console.log(splittedPart3)
 
-// REPLACE
-let string = "Current euro currency, is 15,22"
-let splitIt = string.split(" ")
-console.log(splitIt)
-let currency = splitIt[splitIt.length - 1]
+// // REPLACE
+// let string = "Current euro currency, is 15,22"
+// let splitIt = string.split(" ")
+// console.log(splitIt)
+// let currency = splitIt[splitIt.length - 1]
 
-currency = currency.replace(",", ".")
-console.log(currency)
-// replace method only replaces the first match value.
-currency = Number(currency)
-console.log(currency)
+// currency = currency.replace(",", ".")
+// console.log(currency)
+// // replace method only replaces the first match value.
+// currency = Number(currency)
+// console.log(currency)
 
-let replacedStr = string.replaceAll(",", ".")
-console.log(replacedStr)
+// let replacedStr = string.replaceAll(",", ".")
+// console.log(replacedStr)
 
-let string2 = "Welcome to DGHome"
-let newString = string2.replace("DGHome", "DigiHome")
-let newString2 = string2.replace(" ", "")
-console.log(newString)
-//console.log(newString2)
+// let string2 = "Welcome to DGHome"
+// let newString = string2.replace("DGHome", "DigiHome")
+// let newString2 = string2.replace(" ", "")
+// console.log(newString)
+// //console.log(newString2)
 
-// TRIM
-let string3 = "       Welcome to DGHome        "
-console.log(string3)
-let trimmed = string3.trim()
-console.log(trimmed)
-// let replacedAll = string3.replaceAll(" ", "")
-// console.log(replacedAll)
+// // TRIM
+// let string3 = "       Welcome to DGHome        "
+// console.log(string3)
+// let trimmed = string3.trim()
+// console.log(trimmed)
+// // let replacedAll = string3.replaceAll(" ", "")
+// // console.log(replacedAll)
 
 
-// INCLUDES 
-// returns true or false
-console.log(trimmed.includes("Welcome"))
+// // INCLUDES 
+// // returns true or false
+// console.log(trimmed.includes("Welcome"))
+
+// // INDEXOF
+// let string4 = "All is well !"
+// let ind = string4.indexOf("l")
+// let lastInd = string4.lastIndexOf("l")
+// console.log(lastInd)
+// console.log(ind)
+
+// let ind2 = string4.indexOf("l", ind + 1)
+// let ind3 = string4.indexOf("l", ind2 + 1)
+// console.log(ind2)
+// console.log(ind3)
+
+// // concat
+// let s1 = "Hello "
+// let s2 = "World"
+// let s3 = s1.concat(s2)
+// console.log(s3)
+
+// //charAt
+// let char = s3.charAt(6)
+// console.log(char)
+
+
+// // toLowerCase / toUpperCase
+// let newStr = string3.toLowerCase()
+// console.log(newStr) 
+// let newStr2 = string3.toUpperCase()
+// console.log(newStr2) 
+// ------------------------------------ STRING METHODS -------------------------------- //
+
+
+// ------------------------------------ ARRAYS -------------------------------- //
+const student1 = "Muhlise"
+const student2 = "Utku"
+const student3 = "Kemal"
+
+const studentArray = ["Muhlise", "Utku", "Kemal", "Cengiz", "Erhan"]
+console.log(studentArray)
+
+console.log(studentArray[4])
+console.log(studentArray[studentArray.length - 1])
+
+console.log(studentArray.length)
+
+studentArray[2] = "Beyza"
+console.log(studentArray)
+
+//----- BASIC ARRAY METHODS/OPERATIONS
+// ADDING ELEMENT 
+// push() -> adds element at the and of the array
+//studentArray.push("Ahmet")
+const newLength = studentArray.push("Ahmet") // psuh returns the length of new array
+console.log(studentArray)
+console.log(newLength)
+
+// unshift() -> adds element as a first value of array
+const newArr = studentArray.unshift("Hasan")
+console.log("1: ", newArr)
+studentArray.unshift(3)
+studentArray.unshift(['a'])
+studentArray.unshift(true)
+console.log(studentArray)
+
+// REMOVE ELEMENT
+// pop() -> removes last element
+studentArray.pop()
+console.log(studentArray)
+studentArray.pop()
+console.log(studentArray)
+const popped = studentArray.pop()
+console.log(popped)
+
+// shift() -> removes first element from array
+studentArray.shift()
+console.log(studentArray)
+studentArray.shift()
+console.log(studentArray)
+const shifted = studentArray.shift()
+console.log(shifted)
+console.log(studentArray)
 
 // INDEXOF
-let string4 = "All is well !"
-let ind = string4.indexOf("l")
-let lastInd = string4.lastIndexOf("l")
-console.log(lastInd)
-console.log(ind)
+console.log(studentArray.indexOf("Muhlise"))
+// if array does not include elemnt it returns "-1"
+studentArray.push(23)
+console.log(studentArray)
+console.log(studentArray.indexOf("23")) // it has to be strict equivelant
 
-let ind2 = string4.indexOf("l", ind + 1)
-let ind3 = string4.indexOf("l", ind2 + 1)
-console.log(ind2)
-console.log(ind3)
+// INCLUDES 
+console.log(studentArray.includes("Cengiz"))
+console.log(studentArray.includes("Utku"))
 
-// concat
-let s1 = "Hello "
-let s2 = "World"
-let s3 = s1.concat(s2)
-console.log(s3)
+// SPLICE 
+/**
+  splice(start, deleteCount)
+  splice(start, deleteCount, item1)
+ */
 
-//charAt
-let char = s3.charAt(6)
-console.log(char)
+//   const spliced = studentArray.splice(2, 2)
+//   console.log(spliced)
+  console.log(studentArray)
+
+  const spliced2 = studentArray.splice(0,2, "Ebuzer", "Cengiz", "Erhand")
+  console.log(spliced2)
+  console.log(studentArray)
+  const spliced3 = studentArray.splice(2,0, "Hasan", "Muhlise")
+  console.log(spliced3)
+  console.log(studentArray)
+
+  // SLICE 
+  // slice(start, end) // end does not included
+  const sliced = studentArray.slice(1,3)
+  console.log(sliced)
+  console.log(studentArray)
 
 
-// toLowerCase / toUpperCase
-let newStr = string3.toLowerCase()
-console.log(newStr) 
-let newStr2 = string3.toUpperCase()
-console.log(newStr2) 
-// ------------------------------------ STRING METHODS -------------------------------- //
+  // FizzBuzz 
+  // boş array oluştu
+  // fizzBuzz function yaz 
+  // function her çağırıldığında 1 den başlayarak sırayla sayıları ekle
+  // 3 ve 3 ün katları Fizz 5 ve 5 in katları Buzz 15 ve katları FizzBuzz yazacak
+
+// ------------------------------------ ARRAYS -------------------------------- //
+
+
+// ------------------------------------ OBJECTS -------------------------------- //
+// ------------------------------------ OBJECTS -------------------------------- //
+
