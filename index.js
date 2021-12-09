@@ -809,88 +809,88 @@ P.S:  consider the negative, decimal and any entries other than numeric values t
 
 
 // ------------------------------------ ARRAYS -------------------------------- //
-const student1 = "Muhlise"
-const student2 = "Utku"
-const student3 = "Kemal"
+// const student1 = "Muhlise"
+// const student2 = "Utku"
+// const student3 = "Kemal"
 
-const studentArray = ["Muhlise", "Utku", "Kemal", "Cengiz", "Erhan"]
-console.log(studentArray)
+// const studentArray = ["Muhlise", "Utku", "Kemal", "Cengiz", "Erhan"]
+// console.log(studentArray)
 
-console.log(studentArray[4])
-console.log(studentArray[studentArray.length - 1])
+// console.log(studentArray[4])
+// console.log(studentArray[studentArray.length - 1])
 
-console.log(studentArray.length)
+// console.log(studentArray.length)
 
-studentArray[2] = "Beyza"
-console.log(studentArray)
+// studentArray[2] = "Beyza"
+// console.log(studentArray)
 
-//----- BASIC ARRAY METHODS/OPERATIONS
-// ADDING ELEMENT 
-// push() -> adds element at the and of the array
-//studentArray.push("Ahmet")
-const newLength = studentArray.push("Ahmet") // psuh returns the length of new array
-console.log(studentArray)
-console.log(newLength)
+// //----- BASIC ARRAY METHODS/OPERATIONS
+// // ADDING ELEMENT 
+// // push() -> adds element at the and of the array
+// //studentArray.push("Ahmet")
+// const newLength = studentArray.push("Ahmet") // psuh returns the length of new array
+// console.log(studentArray)
+// console.log(newLength)
 
-// unshift() -> adds element as a first value of array
-const newArr = studentArray.unshift("Hasan")
-console.log("1: ", newArr)
-studentArray.unshift(3)
-studentArray.unshift(['a'])
-studentArray.unshift(true)
-console.log(studentArray)
+// // unshift() -> adds element as a first value of array
+// const newArr = studentArray.unshift("Hasan")
+// console.log("1: ", newArr)
+// studentArray.unshift(3)
+// studentArray.unshift(['a'])
+// studentArray.unshift(true)
+// console.log(studentArray)
 
-// REMOVE ELEMENT
-// pop() -> removes last element
-studentArray.pop()
-console.log(studentArray)
-studentArray.pop()
-console.log(studentArray)
-const popped = studentArray.pop()
-console.log(popped)
+// // REMOVE ELEMENT
+// // pop() -> removes last element
+// studentArray.pop()
+// console.log(studentArray)
+// studentArray.pop()
+// console.log(studentArray)
+// const popped = studentArray.pop()
+// console.log(popped)
 
-// shift() -> removes first element from array
-studentArray.shift()
-console.log(studentArray)
-studentArray.shift()
-console.log(studentArray)
-const shifted = studentArray.shift()
-console.log(shifted)
-console.log(studentArray)
+// // shift() -> removes first element from array
+// studentArray.shift()
+// console.log(studentArray)
+// studentArray.shift()
+// console.log(studentArray)
+// const shifted = studentArray.shift()
+// console.log(shifted)
+// console.log(studentArray)
 
-// INDEXOF
-console.log(studentArray.indexOf("Muhlise"))
-// if array does not include elemnt it returns "-1"
-studentArray.push(23)
-console.log(studentArray)
-console.log(studentArray.indexOf("23")) // it has to be strict equivelant
+// // INDEXOF
+// console.log(studentArray.indexOf("Muhlise"))
+// // if array does not include elemnt it returns "-1"
+// studentArray.push(23)
+// console.log(studentArray)
+// console.log(studentArray.indexOf("23")) // it has to be strict equivelant
 
-// INCLUDES 
-console.log(studentArray.includes("Cengiz"))
-console.log(studentArray.includes("Utku"))
+// // INCLUDES 
+// console.log(studentArray.includes("Cengiz"))
+// console.log(studentArray.includes("Utku"))
 
-// SPLICE 
-/**
-  splice(start, deleteCount)
-  splice(start, deleteCount, item1)
- */
+// // SPLICE 
+// /**
+//   splice(start, deleteCount)
+//   splice(start, deleteCount, item1)
+//  */
 
-//   const spliced = studentArray.splice(2, 2)
-//   console.log(spliced)
-  console.log(studentArray)
+// //   const spliced = studentArray.splice(2, 2)
+// //   console.log(spliced)
+//   console.log(studentArray)
 
-  const spliced2 = studentArray.splice(0,2, "Ebuzer", "Cengiz", "Erhand")
-  console.log(spliced2)
-  console.log(studentArray)
-  const spliced3 = studentArray.splice(2,0, "Hasan", "Muhlise")
-  console.log(spliced3)
-  console.log(studentArray)
+//   const spliced2 = studentArray.splice(0,2, "Ebuzer", "Cengiz", "Erhand")
+//   console.log(spliced2)
+//   console.log(studentArray)
+//   const spliced3 = studentArray.splice(2,0, "Hasan", "Muhlise")
+//   console.log(spliced3)
+//   console.log(studentArray)
 
-  // SLICE 
-  // slice(start, end) // end does not included
-  const sliced = studentArray.slice(1,3)
-  console.log(sliced)
-  console.log(studentArray)
+//   // SLICE 
+//   // slice(start, end) // end does not included
+//   const sliced = studentArray.slice(1,3)
+//   console.log(sliced)
+//   console.log(studentArray)
 
 
   // FizzBuzz 
@@ -903,5 +903,72 @@ console.log(studentArray.includes("Utku"))
 
 
 // ------------------------------------ OBJECTS -------------------------------- //
+const employeeArr = [
+    'John', 
+    'Snow',
+    28,
+    'trainer'
+]
+
+// key-value pairs
+const empObj = {
+    firstName: 'John',
+    lastName: 'Snow',
+    age: 28,
+    job: 'trainer'
+}
+console.log(empObj)
+
+// DOT NOTATION - BRACKET NOTATION
+
+// DOT N.
+console.log(empObj.firstName)
+
+//BRACKET N.
+console.log(empObj['firstName'])
+
+nameKey = "Name"
+console.log(empObj['first' + nameKey])
+console.log(empObj['last' + nameKey])
+
+
+// const val = prompt('What do u want to know about John')
+
+// //console.log(empObj.val)
+// console.log(empObj[val])
+
+// empObj[val] ? console.log(empObj[val]) : console.log('Wrong Request')
+
+empObj.location = 'Germany'
+console.log(empObj)
+
+empObj['mail'] = "abc@mail.com"
+console.log(empObj)
+
+empObj['language'] = ['English', "Deutsch", "Spanish"]
+console.log(empObj)
+
+empObj['driveLicense'] = true
+console.log(empObj)
+
+
+const empObj2 = {
+    firstName: 'John',
+    lastName: 'Snow',
+    birthYear: 1990,
+    job: 'trainer',
+
+    // calcAge : function(birthYear){
+    //     return 2021 - birthYear
+    // }
+    calcAge : function(){
+        console.log("this: ",this)
+        return 2021 - this.birthYear
+    }
+}
+
+console.log(empObj2.calcAge())
+
+
 // ------------------------------------ OBJECTS -------------------------------- //
 
