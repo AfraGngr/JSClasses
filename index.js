@@ -1082,9 +1082,61 @@ const array = ['data1', 'data2', 'data3', 'data4', 'data5']
 
 // console.log(reverseArr)
 
+// WHILE
 
+// let rep = 1
+// while(rep <= 10){
+//     console.log(`push up ${rep}`)
+//     rep++
+// }
 
+// let dice = Math.trunc(Math.random() * 6) + 1
 
+// //console.log(dice)
+
+// while(dice !== 6){
+//     console.log(`You rolled ${dice}`)
+//     dice = Math.trunc(Math.random() * 6) + 1
+//     console.log(dice == 6 ? "You win" : "Try again")
+// }
+
+// let num = 11;
+// let sum = 0 
+
+// do {
+//     sum += num
+//     num++
+// }while(num <=10)
+
+// console.log("The total is: ", sum)
+
+/** 
+1.Take a positive number from user,
+2. Write a function that check whether  the number is "Armstrong" or not.
+
+An n-digit number that is the sum of the nth powers of its digits is called an n-Armstrong number. Examples :
+371 =3 ** 3 + 7 ** 3 + 1 ** 3;
+9474 = 9 ** 4 + 4 ** 4 + 7 ** 4 + 4 ** 4;
+93084 = 9 ** 5 + 3 ** 5 + 0 ** 5 + 8 ** 5 + 4 **5.
+
+P.S:  consider the negative, decimal and any entries other than numeric values then display a warning message to the
+*/
+
+const number = prompt("Please enter a number: ")
+function isArmstrong(number){
+    let len = number.length
+    let arr = number.split('')
+    let sum = 0
+    console.log(arr)
+    for(let i = 0; i < arr.length; i++){
+        sum += arr[i] ** len
+    }
+
+    return sum == number ? `${number} is Armstrong` : `${number} is not Armstrong`
+    
+}
+
+console.log(isArmstrong(number))
 
 
 // console.log(fizzBuzz())
