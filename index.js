@@ -1026,24 +1026,61 @@ P.S:  consider the negative, decimal and any entries other than numeric values t
 //     console.log(`push up ${rep}`)
 // }
 
-const fbArray = []
+// const fbArray = []
 
-function fizzBuzz(){
-    for(let i = 1; i <= 100; i++){
-        if(i % 3 == 0 && i % 5 == 0){
-            fbArray.push('FizzBuzz')
-        }else if (i % 5 == 0){
-            fbArray.push('Buzz')
-        }else if (i % 3 == 0){
-            fbArray.push('Fizz')
-        }else {
-            fbArray.push(i)
-        }
-    }
-    return fbArray
-}
+// function fizzBuzz(){
+//     for(let i = 1; i <= 100; i++){
+//         if(i % 3 == 0 && i % 5 == 0){
+//             fbArray.push('FizzBuzz')
+//         }else if (i % 5 == 0){
+//             fbArray.push('Buzz')
+//         }else if (i % 3 == 0){
+//             fbArray.push('Fizz')
+//         }else {
+//             fbArray.push(i)
+//         }
+//     }
+//     return fbArray
+// }
 
-console.log(fbArray)
+// console.log(fbArray)
+
+const array = ['data1', 'data2', 'data3', 'data4', 'data5']
+
+// console.log(array[0])
+// console.log(array[1])
+// console.log(array[2])
+// console.log(array[3])
+// for (let i = 0; i < array.length; i++){
+//     console.log(array[i])
+// }
+
+// continue - break
+// let evenNumbers = []
+// for(let i = 0; i <= 100; i++){
+//     if(i % 2 != 0) continue
+//     if(i == 51) break
+//     evenNumbers.push(i)
+// }
+// console.log(evenNumbers)
+
+
+// for(let i = 1; i <= 3; i++){
+//     console.log(`--------- Exercise ${i}`)
+//     for(let j = 1; j <= 5; j++){
+//         console.log(`repeat ${j}`)
+//         for(let m = 1; m <= 3; m++){
+//             console.log(`break ${m} sec`)
+//         }
+//     }
+// }
+
+// const reverseArr = []
+// for(let i = 10; i >= 0; i--){
+//     reverseArr.push(i)
+// }
+
+// console.log(reverseArr)
 
 
 
