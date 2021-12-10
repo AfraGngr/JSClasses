@@ -899,76 +899,162 @@ P.S:  consider the negative, decimal and any entries other than numeric values t
   // function her çağırıldığında 1 den başlayarak sırayla sayıları ekle
   // 3 ve 3 ün katları Fizz 5 ve 5 in katları Buzz 15 ve katları FizzBuzz yazacak
 
+//   const fbArray = [];
+//   let count = 1;
+  
+//   function fizzBuzz(){
+//       if(count % 3 == 0 && count % 5 != 0){
+//           fbArray.push('Fizz');
+//       }else if(count % 5 == 0 && count % 3 != 0){
+//           fbArray.push('Buzz')
+//       }else if(count % 3 == 0 && count % 5 == 0){
+//           fbArray.push('FizzBuzz')
+//       }else{
+//           fbArray.push(count)
+//       }
+//       count++ 
+//       return fbArray 
+//   }
+  
+//   console.log(fizzBuzz())
+//   console.log(fizzBuzz())
+//   console.log(fizzBuzz())
+//   console.log(fizzBuzz())
+//   console.log(fizzBuzz())
+//   console.log(fizzBuzz())
+//   console.log(fizzBuzz())
+//   console.log(fizzBuzz())
+//   console.log(fizzBuzz())
+//   console.log(fizzBuzz())
+//   console.log(fizzBuzz())
+//   console.log(fizzBuzz())
+//   console.log(fizzBuzz())
+//   console.log(fizzBuzz())
+//   console.log(fizzBuzz())
+//   console.log(fizzBuzz())
+//   console.log(fizzBuzz())
+//   console.log(fizzBuzz())
+//   console.log(fizzBuzz())
+
 // ------------------------------------ ARRAYS -------------------------------- //
 
 
 // ------------------------------------ OBJECTS -------------------------------- //
-const employeeArr = [
-    'John', 
-    'Snow',
-    28,
-    'trainer'
-]
+// const employeeArr = [
+//     'John', 
+//     'Snow',
+//     28,
+//     'trainer'
+// ]
 
-// key-value pairs
-const empObj = {
-    firstName: 'John',
-    lastName: 'Snow',
-    age: 28,
-    job: 'trainer'
-}
-console.log(empObj)
+// // key-value pairs
+// const empObj = {
+//     firstName: 'John',
+//     lastName: 'Snow',
+//     age: 28,
+//     job: 'trainer'
+// }
+// console.log(empObj)
 
-// DOT NOTATION - BRACKET NOTATION
+// // // DOT NOTATION - BRACKET NOTATION
 
-// DOT N.
-console.log(empObj.firstName)
+// // // DOT N.
+// console.log(empObj.firstName)
 
-//BRACKET N.
-console.log(empObj['firstName'])
+// // //BRACKET N.
+// console.log(empObj['firstName'])
 
-nameKey = "Name"
-console.log(empObj['first' + nameKey])
-console.log(empObj['last' + nameKey])
-
-
-// const val = prompt('What do u want to know about John')
-
-// //console.log(empObj.val)
-// console.log(empObj[val])
-
-// empObj[val] ? console.log(empObj[val]) : console.log('Wrong Request')
-
-empObj.location = 'Germany'
-console.log(empObj)
-
-empObj['mail'] = "abc@mail.com"
-console.log(empObj)
-
-empObj['language'] = ['English', "Deutsch", "Spanish"]
-console.log(empObj)
-
-empObj['driveLicense'] = true
-console.log(empObj)
+// // nameKey = "Name"
+// // console.log(empObj['first' + nameKey])
+// // console.log(empObj['last' + nameKey])
 
 
-const empObj2 = {
-    firstName: 'John',
-    lastName: 'Snow',
-    birthYear: 1990,
-    job: 'trainer',
+// // const val = prompt('What do u want to know about John')
 
-    // calcAge : function(birthYear){
-    //     return 2021 - birthYear
-    // }
-    calcAge : function(){
-        console.log("this: ",this)
-        return 2021 - this.birthYear
-    }
-}
+// // // //console.log(empObj.val)
+// // // console.log(empObj[val])
 
-console.log(empObj2.calcAge())
+// // // empObj[val] ? console.log(empObj[val]) : console.log('Wrong Request')
 
+//  empObj.location = 'Germany'
+// // console.log(empObj)
+
+// empObj['mail'] = "abc@mail.com"
+// // console.log(empObj)
+
+// // empObj['language'] = ['English', "Deutsch", "Spanish"]
+// // console.log(empObj)
+
+// // empObj['driveLicense'] = true
+// // console.log(empObj)
+
+
+// const empObj2 = {
+//     firstName: 'John',
+//     lastName: 'Snow',
+//     birthYear: 1990,
+//     job: 'trainer',
+
+//     // calcAge : function(birthYear){
+//     //     return 2021 - birthYear
+//     // }
+//     calcAge : function(){
+//         console.log("this: ",this)
+//         return 2021 - this.birthYear
+//     }
+// }
+
+//  console.log(empObj2.calcAge())
 
 // ------------------------------------ OBJECTS -------------------------------- //
+
+
+// ------------------------------------ LOOPS-------------------------------- //
+
+// console.log('push up 1')
+// console.log('push up 2')
+// console.log('push up 3')
+// console.log('push up 4')
+// console.log('push up 5')
+// console.log('push up 6')
+// console.log('push up 7')
+// console.log('push up 8')
+// console.log('push up 9')
+// console.log('push up 10')
+
+// for(let rep = 1; rep <= 30; rep++){
+//     console.log(`push up ${rep}`)
+// }
+
+const fbArray = []
+
+function fizzBuzz(){
+    for(let i = 1; i <= 100; i++){
+        if(i % 3 == 0 && i % 5 == 0){
+            fbArray.push('FizzBuzz')
+        }else if (i % 5 == 0){
+            fbArray.push('Buzz')
+        }else if (i % 3 == 0){
+            fbArray.push('Fizz')
+        }else {
+            fbArray.push(i)
+        }
+    }
+    return fbArray
+}
+
+console.log(fbArray)
+
+
+
+
+
+
+// console.log(fizzBuzz())
+
+
+
+
+
+// ------------------------------------ LOOPS -------------------------------- //
 
