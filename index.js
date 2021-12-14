@@ -1122,28 +1122,53 @@ An n-digit number that is the sum of the nth powers of its digits is called an n
 P.S:  consider the negative, decimal and any entries other than numeric values then display a warning message to the
 */
 
-const number = prompt("Please enter a number: ")
-function isArmstrong(number){
-    let len = number.length
-    let arr = number.split('')
-    let sum = 0
-    console.log(arr)
-    for(let i = 0; i < arr.length; i++){
-        sum += arr[i] ** len
-    }
+// const number = prompt("Please enter a number: ")
+// function isArmstrong(number){
+//     let len = number.length
+//     let arr = number.split('')
+//     let sum = 0
+//     console.log(arr)
+//     for(let i = 0; i < arr.length; i++){
+//         sum += arr[i] ** len
+//     }
 
-    return sum == number ? `${number} is Armstrong` : `${number} is not Armstrong`
+//     return sum == number ? `${number} is Armstrong` : `${number} is not Armstrong`
     
-}
+// }
 
-console.log(isArmstrong(number))
-
-
+// console.log(isArmstrong(number))
 // console.log(fizzBuzz())
 
 
-
-
-
 // ------------------------------------ LOOPS -------------------------------- //
+
+//PRIME NUMBER 
+
+let number = prompt("Please enter a number: ")
+alert("Alert")
+// // console.log(typeof number)
+// // console.log(Number(number))
+// number = Number(number)
+// // console.log(Number.isInteger(number))
+// // console.log(typeof number)
+// if(number <= 0 || Number.isInteger(number) == false || isNaN(number)) alert("Please enter a positive integer")
+
+// function isPrime(num){
+//   if(num == 1){
+//     return `${num} is not a Prime Number`
+//   }else if(num == 2){
+//     return `${num} is a Prime Number`
+//   } else {
+//     for(let i = 2; i < num; i++){
+//       if(num % i == 0){
+//         return `${num} is not a Prime Number`
+//       }
+//     }
+//     return `${num} is a Prime Number`
+//   }
+// }
+
+// console.log(isPrime(number))
+
+
 
