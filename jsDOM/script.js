@@ -36,7 +36,7 @@ let formItems = document.querySelector(".form-items").innerText
 //console.log(formItems)
 
 //let first3 = document.querySelector("#first-three").innerHTML
-let first3 = document.querySelector("#first-three").innerHTML
+let first3 = document.querySelector("#first-three")
 // console.log(first3)
 
 let check = document.querySelector(".form-check-label").innerText
@@ -69,23 +69,87 @@ console.log(firstName)
 // const classProp = firstName.className
 // console.log(classProp)
 
+// firstName.className = "Hasan"
+// console.log(firstName)
+
 firstName.classList.add("Hasan")
-console.log(firstName)
+// console.log(firstName)
+
+// firstName.classList.add("Hasan")
+// console.log(firstName)
 
 firstName.classList.remove("form-control")
-console.log(firstName)
+// console.log(firstName)
 
-firstName.setAttribute("class", "Htoker")
-console.log(firstName)
+// firstName.setAttribute("class", "Htoker")
+// console.log(firstName)
 // firstName.className = "Gamze"
 // console.log(firstName)
 
-//first3.innerHTML = `<div>Muhlise</div>`
+
+//let first3 = document.querySelector("#first-three")
+// first3.innerHTML = `<div>Muhlise</div>`
 
 
+let newDiv = document.createElement("div")
+newDiv.setAttribute("class", "col-md-12")
+let newInput = document.createElement("input")
+newInput.setAttribute("type", "text")
+newInput.setAttribute("name", "name")
+newInput.setAttribute("placeholder", "Full Name")
+newInput.setAttribute("class", "form-control")
+
+newDiv.appendChild(newInput)
+// console.log(newDiv)
+
+// first3.appendChild(newDiv)
+
+// insertBefore()
+// parentNode.insertBefore(newNode, childNode)
+
+const parentDiv = document.getElementById("email").parentNode
+console.log(parentDiv)
+const emailInput = document.getElementById("email")
+
+parentDiv.insertBefore(newDiv, emailInput)
+
+
+//console.log(first3.children[0])
+//console.log(first3.firstElementChild())
 
 // let node = document.createElement("div")
 // let text = document.createTextNode("Utku")
 // node.appendChild(text)
-
 // first3.appendChild(node)
+
+let positionDiv = ["Position", "Junior Web Developer", "Senior Web Developer", "Project Manager"]
+let jobList = document.getElementById("job-list")
+
+// jobList.innerHTML = `<option>A</option><option>b</option><option>c</option><option>d</option>`
+
+// for (let i = 0; i < positionDiv.length; i++) {
+//     jobList.innerHTML += `<option>${positionDiv[i]}</option>`
+// }
+
+// for(el of positionDiv){
+//     jobList.innerHTML += `<option>${el}</option>`
+// }
+
+positionDiv.forEach(el => jobList.innerHTML += `<option>${el}</option>`)
+
+const button = document.getElementById("submit")
+
+// button.style.width ="25%"
+// button.style.height ="5vh"
+// button.style.backgroundColor = "antiquewhite"
+// button.style.borderRadius = "15px"
+
+button.style.cssText = `
+    width : 25%;
+    height: 5vh;
+    background-color: antiquewhite;
+    border-radius: 15px
+`
+
+
+
