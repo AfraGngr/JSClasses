@@ -147,3 +147,8 @@ html, body {
 .valid-feedback{
    color: #2acc80;
 }
+
+span{
+    color: #fff;
+    font-size: 1rem;
+}

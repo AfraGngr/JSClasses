@@ -1,6 +1,8 @@
+// load -- onload
+window.addEventListener("load", function(){
 // getElementById
 // let fName = document.getElementById("first-name")
-let lastName = document.getElementById("last-name")
+// let lastName = document.getElementById("last-name")
 // console.log(fName)
 // console.log(lastName)
 
@@ -135,7 +137,7 @@ let jobList = document.getElementById("job-list")
 //     jobList.innerHTML += `<option>${el}</option>`
 // }
 
-positionDiv.forEach(el => jobList.innerHTML += `<option>${el}</option>`)
+positionDiv.forEach(el => jobList.innerHTML += `<option value='${el}'>${el}</option>`)
 
 const button = document.getElementById("submit")
 
@@ -151,5 +153,30 @@ button.style.cssText = `
     border-radius: 15px
 `
 
+const lastName = document.getElementById("last-name")
+const charCount = document.getElementById("char-count")
+const maxLenght = lastName.getAttribute("max-length")
+
+const showRemaninChar = () => {
+    console.log(lastName.value.length)
+    // const val = lastName.value
+    // charCount.innerText = lastName.value.length + "/" + maxLenght
+    if(lastName.value.length == 0){
+        charCount.style.display = "none"
+    }else{
+        console.log("else")
+        charCount.style.display = "inline"
+        charCount.innerText = lastName.value.length + "/" + maxLenght
+    }
+}
+ 
+lastName.addEventListener("keyup", showRemaninChar)
+
+const position = document.getElementById("position")
+
+jobList.addEventListener("change", function() {
+    position.innerText = `You selected ${jobList.value}`
+})
 
 
+})
