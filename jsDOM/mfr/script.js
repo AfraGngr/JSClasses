@@ -7,8 +7,8 @@ const mapped = arr.map((element, index, array) => {
     return `index:${index}, ${element ** 3} ` 
 })
 
-console.log(arr)
-console.log(mapped)
+// console.log(arr)
+// console.log(mapped)
 
 const DATA = [
     {
@@ -75,3 +75,12 @@ DATA.map(el => {
 
     container.appendChild(newDiv)
 })
+
+
+// FILTER 
+
+const numbers = [1, 12, 5, 8, 37, 86, 54, 33, 96]
+
+const filtered = numbers.filter( el => el % 2 == 0)
+
+console.log(filtered)
