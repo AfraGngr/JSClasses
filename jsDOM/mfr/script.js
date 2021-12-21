@@ -84,3 +84,33 @@ const numbers = [1, 12, 5, 8, 37, 86, 54, 33, 96]
 const filtered = numbers.filter( el => el % 2 == 0)
 
 console.log(filtered)
+
+const arr2 = [1, 2, 3, 3, 5, 5, 5]
+
+function filterMoreThanOne(arr2){
+    // return arr2.filter((el, i) => el != arr2[i+1]) // yan yana ise 
+   return arr2.filter((el,i) => {
+        console.log(el, i, arr2.indexOf(el))
+        return arr2.indexOf(el) == i
+    }
+    )
+}
+
+console.log(filterMoreThanOne(arr2))
+
+
+// REDUCE 
+
+// arr.reduce((prevValue,currentValue,i,arr))
+
+const numbers2 = [1, 12, 5, 8, 37, 86, 54, 33, 96]
+
+const reduced = numbers2.reduce(function(prevValue, currentValue){
+    console.log("prevValue: " + prevValue)
+    console.log("currentValue: " + currentValue)
+    return prevValue + currentValue
+}, 15)
+
+// reduce(function(prevValue,currentValue,i,arr), initialValue)
+
+console.log(reduced)
