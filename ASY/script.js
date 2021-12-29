@@ -93,32 +93,32 @@ function renderCountry(data){
 
 
 // // CONSUME 
-function getCountryData(country){
-    fetch(`https://restcountries.com/v2/nme/${country}`)
-    .then(res => {
-        //console.log(res)
-        if(!res.ok) throw new Error(`Country not found ${res.status}`)
-        return res.json()
-    })   
-    .then(response => {
-        //console.log(response)
-        renderCountry(response[0])
-        const neighbour = response[0].borders[0]
-        return fetch(`https://restcountries.com/v2/alpha/${neighbour}`)
-    })
-    .then(data =>{
-        console.log("aaaaa", data)
-        return data.json()
-    })
-    .then(neighbour => {
-        console.log("22222", neighbour)
-        renderCountry(neighbour)}
-    ).catch(err => console.log(err.message))
-}
+// function getCountryData(country){
+//     fetch(`https://restcountries.com/v2/nme/${country}`)
+//     .then(res => {
+//         //console.log(res)
+//         if(!res.ok) throw new Error(`Country not found ${res.status}`)
+//         return res.json()
+//     })   
+//     .then(response => {
+//         //console.log(response)
+//         renderCountry(response[0])
+//         const neighbour = response[0].borders[0]
+//         return fetch(`https://restcountries.com/v2/alpha/${neighbour}`)
+//     })
+//     .then(data =>{
+//         console.log("aaaaa", data)
+//         return data.json()
+//     })
+//     .then(neighbour => {
+//         console.log("22222", neighbour)
+//         renderCountry(neighbour)}
+//     ).catch(err => console.log(err.message))
+// }
 
 
-const btn = document.querySelector(".btn")
-btn.addEventListener("click", () => getCountryData("portugal"))
+// const btn = document.querySelector(".btn")
+// btn.addEventListener("click", () => getCountryData("portugal"))
 
 
 // js behind the scenes
@@ -150,3 +150,83 @@ btn.addEventListener("click", () => getCountryData("portugal"))
 //     console.log(res)
 // })
 // console.log("end")
+
+
+
+// ASYNC-AWAIT
+
+// async function getData(){
+
+// }
+
+// const getCountry = async function(){
+//     const res = await fetch(`https://restcountries.com/v2/name/germany`)
+//     const data = await res.json()
+//     renderCountry(data[0])
+//     return 'You get germany'
+// }
+
+// // getCountry()
+// // console.log("first")
+
+// // console.log("1")
+// // getCountry()
+// // console.log("3")
+
+// // const prom = fetch(`https://restcountries.com/v2/name/germany`)
+// // console.log(prom)
+
+// console.log("1")
+// // const country = getCountry()
+// // console.log(country)
+// getCountry().then(res => console.log(res))
+// console.log("3")
+
+
+// Promise is a container for future use
+
+
+// function getCountryData(country){
+//     fetch(`https://restcountries.com/v2/nme/${country}`)
+//     .then(res => res.json())   
+//     .then(response => renderCountry(response[0]))
+// }
+
+// const a = 3
+// a = 8
+
+// try{
+//     const x = 3
+//     x = 5
+// }catch(err){
+//     console.log(err.message)
+// }
+
+
+// TRY CATCH
+
+const renderError = function(msg){
+    countriesContainer.insertAdjacentText("beforeend", msg)
+    countriesContainer.style.opacity = 1
+}
+
+const getCountry = async function(){
+    try{
+        const res = await fetch(`https://restcountries.com/v2/nme/germany`); 
+        if(!res.ok) throw new Error(`Something went wrong. ${res.status} Not found`);
+        const data = await res.json()
+        renderCountry(data[0])
+        return 'You get germany'
+    }catch(err){
+        renderError(err.message)
+        console.log(err.message)
+        throw err
+    }
+}
+
+const btn = document.querySelector(".btn")
+btn.addEventListener("click", () => getCountry())
+
+// getCountry()
+// .then(res => console.log("1", res))
+// .catch(err => console.log("2", err))
