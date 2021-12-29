@@ -83,33 +83,70 @@ function renderCountry(data){
 
 // getCountriesAndNeighbours("portugal")
 
-const req = fetch("https://restcountries.com/v2/name/portugal")
-console.log(req)
+// const req = fetch("https://restcountries.com/v2/name/portugal")
+// console.log(req)
 
-// Promise Lifecycle Events
-// pending 
-// settled -> fulfilled , rejected
-// consuming promise 
+// // Promise Lifecycle Events
+// // pending 
+// // settled -> fulfilled , rejected
+// // consuming promise 
 
 
-// CONSUME 
+// // CONSUME 
 function getCountryData(country){
     fetch(`https://restcountries.com/v2/nme/${country}`)
     .then(res => {
-        console.log(res)
+        //console.log(res)
         if(!res.ok) throw new Error(`Country not found ${res.status}`)
-        return res.json()})   
+        return res.json()
+    })   
     .then(response => {
+        //console.log(response)
         renderCountry(response[0])
         const neighbour = response[0].borders[0]
         return fetch(`https://restcountries.com/v2/alpha/${neighbour}`)
     })
-    .then(data => data.json())
-    .then(neighbour => renderCountry(neighbour))
-    .catch(err => console.log(err.message))
+    .then(data =>{
+        console.log("aaaaa", data)
+        return data.json()
+    })
+    .then(neighbour => {
+        console.log("22222", neighbour)
+        renderCountry(neighbour)}
+    ).catch(err => console.log(err.message))
 }
 
 
 const btn = document.querySelector(".btn")
 btn.addEventListener("click", () => getCountryData("portugal"))
 
+
+// js behind the scenes
+// single thread -> one job at a time 
+
+
+// const name = "Kemal"
+
+// const first = () => {
+//     let a = 1
+//     const b = second()
+
+//     a = a + b
+//     return a
+// }
+
+// const second = () => {
+//     const c = 2
+//     return c
+// }
+
+// const x = first()
+
+// console.log("start")
+// setTimeout(() => console.log("0 sec"), 0)
+// Promise.resolve("Promise 1").then(res => console.log(res))
+// Promise.resolve("Promise 2").then(res => {
+//     for (let i = 0; i < 1000000000; i++){}
+//     console.log(res)
+// })
+// console.log("end")
